@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS</title>
+
+    <style>
+        input {
+            border: 1px solid rgb(207, 207, 207);
+            text-align: center;
+        }
+
+        .right {
+            color: rgb(111, 146, 111);
+        }
+
+        .wrong {
+            color: rgb(214, 87, 87);
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <span>{{ num1 }} + {{ num2 }} = </span>
+        <input type="text" v-model="result">
+        <div class="right" v-if="parseInt(result) == parseInt(num1) + parseInt(num2)">Certo!</div>
+        <div class="wrong" v-if="result != '0' && parseInt(result) != parseInt(num1) + parseInt(num2)">Errado!</div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
