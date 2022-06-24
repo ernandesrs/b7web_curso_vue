@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Vue.js</title>
+	<meta charset="utf-8" />
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<!--<script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+	<div id="app">
+		<header class="header">
+
+			
+
+		</header>
+		<section class="container">
+			<section class="container__content">
+
+				<div v-if="aviso">Um aviso legal e maneiro</div>
+				<hr>
+				<div v-bind:id="idDinamico">
+					Uma div com propriedade(id) dinâmica :D
+				</div>
+				<hr>
+				<a v-bind:href="linkDinamico">
+					Acessar
+				</a>
+				<hr>
+				<div v-bind:id="'item-' + numeroDinamico">Um ID dinâmico composto</div>
+				<hr>
+				<button v-on:click="clicou">Evento no botão: clique aqui kkkkk</button>
+				<hr>
+				<form v-on:submit.prevent="submitou">
+					<input type="text">
+					<button type="submit">Enviar</button>
+				</form>
+				
+			</section>
+			<aside class="container__sidebar">
+
+
+
+			</aside>
+		</section>
+		<footer class="footer">
+
+			
+
+		</footer>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+
+</html>
